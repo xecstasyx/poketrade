@@ -1,0 +1,19 @@
+test:
+  sidekiq_redis:
+    url: 'redis://127.0.0.1:6379/3'
+    namespace: Poketrade
+
+development:
+  sidekiq_redis:
+    url: 'redis://127.0.0.1:6379/2'
+    namespace: Poketrade
+
+staging:
+  sidekiq_redis:
+    url: 'redis://127.0.0.1:6379/1'
+    namespace: Poketrade
+
+production:
+  sidekiq_redis:
+    url: 'redis://127.0.0.1:6379/0'
+    namespace: Poketrade

@@ -1,0 +1,12 @@
+.container.mt-5
+  p
+    | Los candidatos de la lista irán apareciendo apenas sean cargados en la plataforma.
+    br/
+    | Una vez que aparezcan, puedes enviarles un correo a cada uno para invitarlos al screening o bien presionar el botón "Invitar a todos" para realizar una invitación masiva.
+    br/
+
+  h2.mt-4 Candidatos:
+  = react_component('CandidateList', { \
+      screenings: @list.screenings || [], \
+      list: @list \
+    })

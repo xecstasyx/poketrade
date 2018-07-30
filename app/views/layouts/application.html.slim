@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title PokeTrade App Rails 5
+    = csrf_meta_tags
+    = csp_meta_tag
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+
+  body
+    // Header
+    = render "commons/navbar/main"
+
+    // Flashes
+    - if flash.any?
+      .mb-1.mt-3.col-6.offset-3
+        - flash.each do |key, value|
+          div class="#{flash_class(key)}"
+            = value
+
+    // Contenido
+    = yield

@@ -1,0 +1,8 @@
+= form_for @list, html: {} do |list_form|
+
+  .form-group
+    = list_form.label :file
+    = list_form.file_field :file, required: true, class: 'form-control-file'
+
+  .form-group
+    = list_form.submit 'Subir' , class: 'btn btn-primary'
